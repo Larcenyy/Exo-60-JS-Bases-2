@@ -6,18 +6,27 @@
 <meta charset="UTF-8">
 <script>
 	
-	function change_liste()
-		{
+function change_liste()
+	{
+		let elem = document.querySelectorAll("li");
+		let list = document.querySelector("ul");
+		list.className = "test";
+		console.log(elem);
+		console.log(list);
 
-			
-		
+		for (let i = 0; i < elem.length; i++){
+			elem[i].innerText = "blabla";
 		}
+
+		if (list.hasAttribute){
+			alert("oui");
+			list.className = "test";
+		}
+	}
 	
 </script>
-
 </head>
 <body onclick="change_liste()">
-
 <ul>
 	<li>a</li>
 	<li>b</li>
@@ -28,6 +37,5 @@
 	<li>g</li>
 	<li>h</li>	
 </ul>
-
 </body>
 </html>
